@@ -1,0 +1,187 @@
+@charset 'utf-8';
+
+.header-bar{
+    background-color: #344054;
+    color: #fff;
+    margin-left: -20px;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+.header-bar h1{
+    color: #fff;
+    margin: 0;
+    font-size: 1.5em;
+}
+.text{
+    margin-bottom: 30px;
+}
+.lh2{
+    line-height: 2;
+}
+.nav-bar{
+    margin-bottom: 20px;
+}
+.nav-bar .search-box{
+    display: flex;
+    align-items: center;
+}
+.nav-bar .search-box select{
+    border: 1px solid #0783BE;
+    height: 43px;
+    width: 300px;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 15px;
+    box-shadow: none;
+}
+.nav-bar .search-box input[type="text"]{
+    border: 1px solid #D0D5DD;
+    height: 43px;
+    width: 300px;
+    background-color: #fff;
+    padding: 0 15px;
+}
+.nav-bar .filter-btn .submit,
+.nav-bar .search-box .submit{
+    padding: 0;
+    margin: 0;
+}
+.nav-bar .filter-btn input[type="submit"],
+.nav-bar .search-box input[type="submit"]{
+    margin-left: 10px;
+    border: 1px solid #0783BE;
+    box-shadow: none;
+    background-color: #fff;
+    color: #0783BE;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: inherit;
+    font-size: inherit;
+}
+.nav-bar .filter-btn input[type="submit"]{
+    margin-left: 0;
+}
+.nav-bar .select-list{
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.nav-bar .select-list .item{
+    display: inline-block;
+    margin: 5px;
+    box-sizing: border-box;
+}
+.nav-bar .select-list input[type="checkbox"]{
+    display: none;
+}
+.nav-bar .select-list label{
+    background-color: #fff;
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 10px 20px;
+    border: 1px solid #2271b1;
+    transition: .3s;
+    display: block;
+}
+.nav-bar .select-list input[type="checkbox"]:checked + label{
+    background-color: #2271b1;
+    color: #fff;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mt30{
+    margin-top: 30px;
+}
+.text-black{
+    color: #000;
+}
+.center{
+    text-align: center;
+}
+.table table{
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table.vat table th,
+.table.vat table td{
+    vertical-align: top;
+}
+.table table th,
+.table table td{
+    padding: 25px;
+}
+.table table th{
+    text-align: left;
+    font-weight: normal;
+    background-color: #344054;
+    font-size: 15px;
+    color: #fff;
+}
+.table table tbody tr:nth-of-type(even) td{
+    background-color: #F9FAFB;
+}
+.table table td{
+    background-color: #fff;
+    font-size: 15px;
+}
+.table table td span{
+    font-size: 12px;
+    padding: 4px 10px 3px;
+    margin-right: 10px;
+    border-radius: 2px;
+    display: inline-block;
+}
+.table table td span.active{
+    border: 1px solid #344054;
+    color: #fff;
+    background-color: #344054;
+}
+.table table td span.deactive{
+    border: 1px solid #344054;
+    color: #344054;
+}
+.table table td a{
+    text-decoration: none;
+}
+.table.plugin-table table th:nth-of-type(1){
+    width: 40%;
+}
+.table.domain-table table th{
+    width: calc(100% - 230px);
+}
+.table.domain-table table th:nth-of-type(2){
+    width: 180px;
+}
+.table.domain-table table th:nth-of-type(3){
+    width: 50px;
+}
+.table table tr:not(:last-child) td{
+    border-bottom: 1px solid #EAECF0;
+}
+.table table th.right,
+.table table td.right{
+    text-align: right;
+}
+.table table td input.delete-btn{
+    box-shadow: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: .3s;
+    background-color: red;
+    border: 1px solid red;
+    color: #fff;
+}
+.table table td input.delete-btn:hover{
+    background-color: transparent;
+    color: red;
+}
+.table table td > div{
+    margin-bottom: 8px;
+}
