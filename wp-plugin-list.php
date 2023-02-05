@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Plugin List
-Description: 登録ドメインのインストール済みプラグイン一覧を表示するプラグインです。
+Description: 登録WPアドレスのインストール済みプラグイン一覧を表示するプラグインです。
 Version: 1.0
 Author: World Utility Co., Ltd.
 */
@@ -34,8 +34,8 @@ class adminController{
         add_action('admin_menu', function(){
             add_submenu_page(
                 'wp-plugin-list',
-                '登録ドメイン一覧',
-                '登録ドメイン一覧',
+                'WPアドレス一覧',
+                'WPアドレス一覧',
                 'manage_options',
                 'wp-plugin-list-domain',
                 [$this, 'domain_page']
@@ -44,8 +44,8 @@ class adminController{
         add_action('admin_menu', function(){
             add_submenu_page(
                 'wp-plugin-list',
-                '新規ドメイン追加',
-                '新規ドメイン追加',
+                '新規WPアドレス追加',
+                '新規WPアドレス追加',
                 'manage_options',
                 'wp-plugin-list-add-domain',
                 [$this, 'add_domain_page']

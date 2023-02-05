@@ -25,7 +25,7 @@ class viewPlugin{
                                                 'Authorization' => 'Basic '.base64_encode("user:user01")
                                             ]
                                         ];
-                                        $response = wp_remote_get('http://'.$result->domain.'/wp-json/wp/custom/get_plugins',$args);
+                                        $response = wp_remote_get(''.$result->domain.'/wp-json/wp/custom/get_plugins',$args);
                                         if(wp_remote_retrieve_response_code($response) == 200){
                                             $response = json_decode(wp_remote_retrieve_body($response),true);
                                             if(!empty($response)){
@@ -73,7 +73,7 @@ class viewPlugin{
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>ドメイン名</th>
+                                        <th>WordPressアドレス</th>
                                         <th>選択中のプラグイン</th>
                                     </tr>
                                 </thead>
@@ -102,7 +102,7 @@ class viewPlugin{
                                             if(!empty($exists_plugins)):
                                     ?>
                                         <tr>
-                                            <td><a href="http://<?php echo $exists_plugins[0]['site']; ?>" target="_blank"><?php echo $exists_plugins[0]['site']; ?></a></td>
+                                            <td><a href="<?php echo $exists_plugins[0]['site']; ?>" target="_blank"><?php echo $exists_plugins[0]['site']; ?></a></td>
                                             <td>
                                                 <?php
                                                     foreach($exists_plugins as $plugin){

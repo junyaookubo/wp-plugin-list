@@ -6,7 +6,7 @@ class addViewDomain{
         ob_start();
         ?>
             <div class="header-bar">
-                <h1>新規ドメイン追加</h1>
+                <h1>新規WordPressアドレス追加</h1>
             </div>
             <div class="container">
                 <div class="wrap">
@@ -16,21 +16,21 @@ class addViewDomain{
                             $insert = $wpdb->insert(
                                 'wp_plugin_list_domain',
                                 [
-                                    'domain' => $_POST['domain']
+                                    'domain' => untrailingslashit($_POST['domain'])
                                 ]
                             );
                             if($insert){
-                                echo '<div id="settings_updated" class="updated notice is-dismissible"><p><strong>ドメインを追加しました。</strong></p></div>';
+                                echo '<div id="settings_updated" class="updated notice is-dismissible"><p><strong>WordPressアドレスを追加しました。</strong></p></div>';
                             }else{
-                                echo '<div id="settings_updated" class="updated notice is-dismissible"><p><strong>ドメインの追加に失敗しました。<br>すでに追加してあるドメインか確認してください。</strong></p></div>';
+                                echo '<div id="settings_updated" class="updated notice is-dismissible"><p><strong>WordPressアドレスの追加に失敗しました。<br>すでに追加してあるWordPressアドレスか確認してください。</strong></p></div>';
                             }
                         }
                     ?>
                     <div class="nav-bar">
                         <form action="" method="POST">
                             <div class="search-box">
-                                <input type="text" name="domain" placeholder="ドメインを入力してください" required>
-                                <input type="submit" value="ドメインを追加する">
+                                <input type="text" name="domain" placeholder="WordPressアドレスを入力してください" required>
+                                <input type="submit" value="WordPressアドレスを追加する">
                             </div>
                         </form>
                     </div>

@@ -11,8 +11,8 @@ class viewAdmin{
             <div class="container">
                 <div class="wrap">
                     <p class="text lh2">
-                        登録済みのドメインからインストール済みのプラグイン一覧を表示します。<br />
-                        プラグインの一覧を取得したいドメインには、別途「WP Plugin List API」をインストールしてください。
+                        登録済みのWordPressアドレスからインストール済みのプラグイン一覧を表示します。<br />
+                        プラグインの一覧を取得したいWordPressアドレスには、別途「WP Plugin List API」をインストールしてください。
                     </p>
                     <?php
                             global $wpdb;
@@ -51,7 +51,7 @@ class viewAdmin{
                                                 'Authorization' => 'Basic '.base64_encode("user:user01")
                                             ]
                                         ];
-                                        $response = wp_remote_get('http://'.$domain.'/wp-json/wp/custom/get_plugins',$args);
+                                        $response = wp_remote_get(''.$domain.'/wp-json/wp/custom/get_plugins',$args);
                                         if(wp_remote_retrieve_response_code($response) == 200):
                                             $response = json_decode(wp_remote_retrieve_body($response),true);
                                             if(!empty($response)): foreach($response as $plugin):

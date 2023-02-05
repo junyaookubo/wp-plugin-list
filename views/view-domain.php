@@ -7,21 +7,21 @@ class viewDomain{
         ob_start();
         ?>
             <div class="header-bar">
-                <h1>登録済みドメイン一覧</h1>
+                <h1>登録済みWordPressアドレス一覧</h1>
             </div>
             <div class="container">
                 <div class="wrap">
                     <?php
                         if(isset($_POST['delete_id'])){
                             $wpdb->delete('wp_plugin_list_domain',['id' => $_POST['delete_id']], ['%d']);
-                            echo '<div id="settings_updated" class="updated notice is-dismissible"><p><strong>ドメインを削除しました。</strong></p></div>';
+                            echo '<div id="settings_updated" class="updated notice is-dismissible"><p><strong>WordPressアドレスを削除しました。</strong></p></div>';
                         }
                     ?>
                     <div class="nav-bar">
                         <form action="" method="POST">
                             <div class="search-box">
                                 <input type="text" name="search_domain" placeholder="キーワードを入力してください" value="<?php if($_POST['search_domain']){ echo $_POST['search_domain']; } ?>">
-                                <input type="submit" value="ドメインを検索する">
+                                <input type="submit" value="WordPressアドレスを検索する">
                             </div>
                         </form>
                     </div>
@@ -29,7 +29,7 @@ class viewDomain{
                         <table>
                             <thead>
                                 <tr>
-                                    <th>登録済みのドメイン</th>
+                                    <th>登録済みのWordPressアドレス</th>
                                     <th>追加日</th>
                                     <th></th>
                                 </tr>
@@ -47,7 +47,7 @@ class viewDomain{
                                     if(!empty($results)): foreach($results as $result):
                                 ?>
                                     <tr>
-                                        <td><a href="http://<?php echo $result->domain; ?>" target="_blank"><?php echo $result->domain; ?></a></td>
+                                        <td><a href="<?php echo $result->domain; ?>" target="_blank"><?php echo $result->domain; ?></a></td>
                                         <td><?php echo $result->created_at; ?></td>
                                         <td class="right">
                                             <form action="" method="POST">
@@ -58,7 +58,7 @@ class viewDomain{
                                     </tr>
                                 <?php endforeach; else: ?>
                                     <tr>
-                                        <td>登録されているドメインがありません。</td>
+                                        <td>登録されているWordPressアドレスがありません。</td>
                                         <td></td>
                                         <td></td>
                                     </tr>
